@@ -22,11 +22,11 @@ def main():
     st.markdown('Lengkapi data berikut:')
     
     st.write('\n')
-    age = st.text_input("Age", "0")
-    sex = st.text_input("Sex", "0")
-    bmi = st.text_input("BMI", "0")
-    children = st.text_input("Children", "0")
-    smoker = st.text_input("Smoker", "0")
+    age = st.number_input("Age", 0)
+    sex = st.number_input("Sex", 0)
+    bmi = st.number_input("BMI", 0)
+    children = st.number_input("Children", 0)
+    smoker = st.number_input("Smoker", 0)
     result =""
     
     if st.button("REVEAL PREDIKSI"):
