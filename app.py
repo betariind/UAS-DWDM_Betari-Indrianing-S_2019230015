@@ -4,14 +4,14 @@ import pickle
 import streamlit as st
 
 pickle_in = open('model_uas.pkl', 'rb')
-lr = pickle.load(pickle_in)
+nb = pickle.load(pickle_in)
 
 def welcome():
     return 'Hallo'
 
 def prediction(age, sex, bmi, children, smoker):
 
-    prediction = lr.predict([[age, sex, bmi, children, smoker]])
+    prediction = nb.predict([[age, sex, bmi, children, smoker]])
     print(prediction)
     return prediction
 
